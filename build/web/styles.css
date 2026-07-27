@@ -1,0 +1,364 @@
+/* ==========================================================
+   FIELD AGENT MANAGEMENT SYSTEM
+   Modern Professional Theme
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+
+    background:linear-gradient(135deg,#dbeafe,#eef2ff,#f8fafc);
+
+    min-height:100vh;
+
+    color:#1f2937;
+
+    padding:40px;
+
+}
+
+
+/* ================= Containers ================= */
+
+.container{
+
+    width:95%;
+    max-width:500px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.10);
+
+    animation:fadeIn .4s ease;
+
+}
+
+.large-container{
+
+    max-width:1200px;
+
+}
+
+
+/* ================= Titles ================= */
+
+h1{
+
+    color:#2563eb;
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+
+}
+
+
+/* ================= Labels ================= */
+
+label{
+
+    display:block;
+
+    font-weight:600;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    color:#374151;
+
+}
+
+
+/* ================= Inputs ================= */
+
+input[type=text],
+input[type=password],
+input[type=date],
+select{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    background:#fff;
+
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+
+/* ================= Buttons ================= */
+
+.button,
+input[type=submit]{
+
+    width:100%;
+
+    display:block;
+
+    margin-top:28px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.button:hover,
+input[type=submit]:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.30);
+
+}
+
+.back{
+
+    background:#6b7280;
+
+}
+
+.back:hover{
+
+    background:#4b5563;
+
+}
+
+
+/* ================= Dashboard Buttons ================= */
+
+.menu-btn{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#1f2937;
+
+    background:white;
+
+    border-left:6px solid #2563eb;
+
+    border-radius:12px;
+
+    padding:18px 20px;
+
+    margin:16px 0;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+
+}
+
+.menu-btn:hover{
+
+    transform:translateX(8px);
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+/* ================= Tables ================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+th{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+tr:nth-child(even){
+
+    background:#f8fafc;
+
+}
+
+tr:hover{
+
+    background:#eff6ff;
+
+}
+
+
+/* ================= Links ================= */
+
+a{
+
+    color:#2563eb;
+
+}
+
+a:hover{
+
+    color:#1d4ed8;
+
+}
+
+
+/* ================= Responsive ================= */
+
+@media (max-width:768px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .container{
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:26px;
+
+    }
+
+    table{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+/* ================= Animation ================= */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

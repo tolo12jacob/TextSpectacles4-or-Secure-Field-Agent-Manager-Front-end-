@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>RegisterAgentServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.RegisterAgentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DisplayAllServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.DisplayAllServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DisplaySpecificGenderServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.DisplaySpecificGenderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DisplayMarriedAndGenderServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.DisplayMarriedAndGenderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OldestServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.OldestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterAgentServlet</servlet-name>
+        <url-pattern>/RegisterAgentServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplayAllServlet</servlet-name>
+        <url-pattern>/DisplayAllServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplaySpecificGenderServlet</servlet-name>
+        <url-pattern>/DisplaySpecificGenderServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplayMarriedAndGenderServlet</servlet-name>
+        <url-pattern>/DisplayMarriedAndGenderServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OldestServlet</servlet-name>
+        <url-pattern>/OldestServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <security-constraint>
+        <display-name>AdminConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>AdminResource</web-resource-name>
+            <description>admin resources</description>
+            <url-pattern>/add_agent.html</url-pattern>
+            <url-pattern>/RegisterAgentServlet.do</url-pattern>
+            <url-pattern>/oldest.html</url-pattern>
+            <url-pattern>/OldestServlet.do</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Authenticate admin</description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>TutorConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>TutorResource</web-resource-name>
+            <description>Tutor resources</description>
+            <url-pattern>/display_all.html</url-pattern>
+            <url-pattern>/display_of_gender.html</url-pattern>
+            <url-pattern>/display_married.html</url-pattern>
+            <url-pattern>/display_married_of_gender.html</url-pattern>
+            <url-pattern>/DisplayMarriedAndGenderServlet.do</url-pattern>
+            <url-pattern>/DisplaySpecificGenderServlet.do</url-pattern>
+            <url-pattern>/DisplayAllServlet.do</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Authenticate tutor</description>
+            <role-name>tutor</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>file</realm-name>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/login_error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <description>This is admin role
+</description>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role>
+        <description>This is tutor role</description>
+        <role-name>tutor</role-name>
+    </security-role>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/forbidden.jsp</location>
+    </error-page>
+</web-app>

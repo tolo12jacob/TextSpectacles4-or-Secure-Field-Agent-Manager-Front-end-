@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Field Agent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Register Field Agent</h1>
+
+    <p>
+        Complete the information below to register a new field agent.
+    </p>
+
+    <form action="RegisterAgentServlet.do" method="POST">
+
+        <label for="id">Agent ID</label>
+        <input
+            type="text"
+            id="id"
+            name="id"
+            placeholder="Enter agent ID"
+            required>
+
+        <label for="name">Full Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter full name"
+            required>
+
+        <label for="age">Age</label>
+        <input
+            type="text"
+            id="age"
+            name="age"
+            placeholder="Enter age"
+            required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select>
+
+        <label for="dob">Date of Birth</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+            required>
+
+        <label for="marital">Marital Status</label>
+        <select id="marital" name="marrital">
+            <option value="Married">Married</option>
+            <option value="Single">Single</option>
+            <option value="Divorced">Divorced</option>
+        </select>
+
+        <input type="submit" value="Register Agent">
+
+    </form>
+
+    <a href="menu.html" class="button back">
+        ← Back to Dashboard
+    </a>
+
+</div>
+
+</body>
+</html>
